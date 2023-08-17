@@ -1,0 +1,230 @@
+      mix-rule-providers: 
+
+       # 直连和广告拦截
+       Special:
+          type: http
+          behavior: classical
+          url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Special.yaml
+          path: ./Rules/Special.yaml
+          interval: 21600
+       reject:
+          type: http
+          behavior: classical
+          url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Reject.yaml
+          path: ./Rules/Reject.yaml
+          interval: 21600
+
+       # 国内媒体分组
+       IQ:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQ.yaml
+         path: ./Rules/Media/IQI.yaml
+         interval: 21600
+       IQIYI:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQIYI.yaml
+         path: ./Rules/Media/IQYI.yaml
+         interval: 21600
+       Letv:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Letv.yaml
+         path: ./Rules/Media/Letv.yaml
+         interval: 21600
+       Netease Music:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netease%20Music.yaml
+         path: ./Rules/Media/Netease_Music.yaml
+         interval: 21600
+       Tencent Video:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Tencent%20Video.yaml
+         path: ./Rules/Media/Tencent_Video.yaml
+         interval: 21600
+       Youku:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Youku.yaml
+         path: ./Rules/Media/Youku.yaml
+         interval: 21600
+       WeTV:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/WeTV.yaml
+         path: ./Rules/Media/WeTV.yaml
+         interval: 21600
+
+       # 学习&生产力
+       Claude-ai:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/AI/Claude-ai.yaml
+         path: ./Rules/AI/Claude-ai.yaml
+         interval: 21600
+       Coursera:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Learning/Coursera.yaml
+         path: ./Rules/Learning/Coursera.yaml
+         interval: 21600
+       OpenAI:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/AI/OpenAI.yaml
+         path: ./Rules/AI/OpenAI.yaml
+         interval: 21600
+
+       # 流媒体
+       bilibili:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Bilibili.yaml
+         path: ./Rules/Media/Bilibili.yaml
+         interval: 21600
+       Amazon:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Amazon.yaml
+         path: ./Rules/Media/Amazon.yaml
+         interval: 21600
+       Disney Plus:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Disney%20Plus.yaml
+         path: ./Rules/Media/Disney_Plus.yaml
+         interval: 21600
+       Emby:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Emby.yaml
+         path: ./Rules/Media/Emby.yaml
+         interval: 21600
+       HamiVideo:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/HamiVideo.yaml
+         path: ./Rules/Media/HamiVideo.yaml
+         interval: 21600
+       HBO Max:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/HBO%20Max.yaml
+         path: ./Rules/Media/HBO_Max.yaml
+         interval: 21600
+       Netflix:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netflix.yaml
+         path: ./Rules/Media/Netflix.yaml
+         interval: 21600
+       Spotify:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Spotify.yaml
+         path: ./Rules/Media/Spotify.yaml
+         interval: 21600
+       StarPlusLogin:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/StarPlusLogin.yaml
+         path: ./Rules/Media/StarPlusLogin.yaml
+         interval: 21600
+       StarPlus:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/StarPlus.yaml
+         path: ./Rules/Media/StarPlus.yaml
+         interval: 21600
+       Tiktok:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Tiktok.yaml
+         path: ./Rules/Media/Tiktok.yaml
+         interval: 21600
+       Twitter:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Twitter.yaml
+         path: ./Rules/Media/Twitter.yaml
+         interval: 21600
+       YouTube:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube.yaml
+         path: ./Rules/Media/YouTube.yaml
+         interval: 21600
+       YouTube Music:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube%20Music.yaml
+         path: ./Rules/Media/YouTube_Music.yaml
+         interval: 21600
+        
+       Apple:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml
+         path: ./Rules/Apple.yaml
+         interval: 21600
+
+       # 电报、微软、ChatGPT、Steam 及 PayPal 可选规则列表
+       Google:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Google.yaml
+         path: ./Rules/Google.yaml
+         interval: 21600
+       Telegram:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Telegram.yaml
+         path: ./Rules/Telegram.yaml
+         interval: 21600
+       Microsoft:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml
+         path: ./Rules/Microsoft.yaml
+         interval: 21600
+       Steam:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Steam.yaml
+         path: ./Rules/Steam.yaml
+         interval: 21600
+       PayPal:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/PayPal.yaml
+         path: ./Rules/PayPal.yaml
+         interval: 21600
+
+      # 必须规则列表
+       Speedtest:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Speedtest.yaml
+         path: ./Rules/Speedtest.yaml
+         interval: 21600
+       Proxy:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Proxy.yaml
+         path: ./Rules/Proxy.yaml
+         interval: 21600
+       Domestic:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Domestic.yaml
+         path: ./Rules/Domestic.yaml
+         interval: 21600
+       LAN:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/LAN.yaml
+         path: ./Rules/LAN.yaml
+         interval: 21600
