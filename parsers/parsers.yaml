@@ -1,24 +1,13 @@
 parsers:
+  - reg: ^.*$
+    file: "/home/rice/util/Clash-rule-set/parsers/delete-default-config.js"
+      
   - reg: tag
-    code: |
-      module.exports.parse = (raw, { yaml }) => {
-        const rawObj = yaml.parse(raw)
-        const groups = []
-        const rules = []
-        return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
-      } 
     file: "/home/rice/util/Clash-rule-set/parsers/tag.yaml"
   - reg: tag
     file: "/home/rice/util/Clash-rule-set/parsers/mix-rule-providers.yaml"
 
   - reg: dogapi
-    code: |
-      module.exports.parse = (raw, { yaml }) => {
-        const rawObj = yaml.parse(raw)
-        const groups = []
-        const rules = []
-        return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
-      } 
     file: "/home/rice/util/Clash-rule-set/parsers/PPD.yaml"
   - reg: dogapi
     file: "/home/rice/util/Clash-rule-set/parsers/mix-rule-providers.yaml"
