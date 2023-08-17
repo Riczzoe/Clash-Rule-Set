@@ -15,6 +15,22 @@
             - America
             - Europe 
             - Africa
+        - name: AI
+          type: select
+          proxies:
+            - US
+            - UK
+            - PROXY
+            - HK
+            - TW
+            - SG
+            - KR
+            - JP
+            - Asia
+            - Oceania
+            - America
+            - Europe
+            - Africa 
         - name: Apple
           type: select
           proxies:
@@ -65,7 +81,7 @@
             - America
             - Europe
             - Africa
-        - name: China-Media
+        - name: China
           type: select
           proxies:
             - DIRECT
@@ -82,29 +98,7 @@
             - America
             - Europe
             - Africa
-        - name: Claude-ai
-          type: select
-          proxies:
-            - US
-            - UK
         - name: Coursera
-          type: select
-          proxies:
-            - DIRECT
-            - PROXY
-            - HK
-            - TW
-            - SG
-            - KR
-            - JP
-            - US
-            - UK
-            - Asia
-            - Oceania
-            - America
-            - Europe
-            - Africa
-        - name: DeepL
           type: select
           proxies:
             - DIRECT
@@ -201,23 +195,6 @@
             - America
             - Europe
             - Africa 
-        - name: LeetCode
-          type: select
-          proxies:
-            - PROXY
-            - DIRECT
-            - HK
-            - TW
-            - SG
-            - KR
-            - JP
-            - US
-            - UK
-            - Asia
-            - Oceania
-            - America
-            - Europe
-            - Africa
         - name: Microsoft
           type: select
           proxies:
@@ -251,10 +228,11 @@
             - America
             - Europe
             - Africa
-        - name: OpenAI
+        - name: PayPal
           type: select
           proxies:
             - PROXY
+            - DIRECT
             - HK
             - TW
             - SG
@@ -267,7 +245,7 @@
             - America
             - Europe
             - Africa
-        - name: PayPal
+        - name: Scholar
           type: select
           proxies:
             - PROXY

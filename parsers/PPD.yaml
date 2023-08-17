@@ -12,6 +12,20 @@
             - Asia
             - America
             - Europe 
+        - name: AI
+          type: select
+          proxies:
+            - US
+            - UK
+            - PROXY
+            - HK
+            - TW
+            - SG
+            - KR
+            - JP
+            - Asia
+            - America
+            - Europe
         - name: Apple
           type: select
           proxies:
@@ -55,7 +69,7 @@
             - Asia
             - America
             - Europe
-        - name: China-Media
+        - name: China
           type: select
           proxies:
             - DIRECT
@@ -70,27 +84,7 @@
             - Asia
             - America
             - Europe
-        - name: Claude-ai
-          type: select
-          proxies:
-            - US
-            - UK
         - name: Coursera
-          type: select
-          proxies:
-            - DIRECT
-            - PROXY
-            - HK
-            - TW
-            - SG
-            - KR
-            - JP
-            - US
-            - UK
-            - Asia
-            - America
-            - Europe
-        - name: DeepL
           type: select
           proxies:
             - DIRECT
@@ -219,10 +213,11 @@
             - Asia
             - America
             - Europe
-        - name: OpenAI
+        - name: PayPal
           type: select
           proxies:
             - PROXY
+            - DIRECT
             - HK
             - TW
             - SG
@@ -233,7 +228,7 @@
             - Asia
             - America
             - Europe
-        - name: PayPal
+        - name: Scholar
           type: select
           proxies:
             - PROXY
