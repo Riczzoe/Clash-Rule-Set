@@ -1,16 +1,20 @@
 parsers:
   - reg: ^.*$
     file: "/home/rice/util/Clash-rule-set/parsers/delete-default-config.js"
-      
-  - reg: tag
-    file: "/home/rice/util/Clash-rule-set/parsers/tag.yaml"
-  - reg: tag
-    file: "/home/rice/util/Clash-rule-set/parsers/mix-rule-providers.yaml"
+  - reg: ^.*$
+    file: "/home/rice/util/Clash-rule-set/parsers/default-proxy-groups.yaml"
 
+  - reg: tag
+    file: "/home/rice/util/Clash-rule-set/parsers/TAG.yaml"
   - reg: dogapi
     file: "/home/rice/util/Clash-rule-set/parsers/PPD.yaml"
-  - reg: dogapi
-    file: "/home/rice/util/Clash-rule-set/parsers/mix-rule-providers.yaml"
 
+  - reg: dogapi
+    file: "/home/rice/util/Clash-rule-set/parsers/PPD.js"
+  - reg: tag
+    file: "/home/rice/util/Clash-rule-set/parsers/TAG.js"  
+
+  - reg: ^.*$
+    file: "/home/rice/util/Clash-rule-set/parsers/mix-rule-providers.yaml"
   - reg: ^.*$
     file: "/home/rice/util/Clash-rule-set/parsers/download-providers-fast.js"
