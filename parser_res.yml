@@ -1,0 +1,745 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false
+mode: Rule
+log-level: info
+ipv6: false
+hosts: null
+external-controller: 0.0.0.0:9090
+clash-for-android:
+  append-system-dns: false
+profile:
+  tracing: true
+proxies:
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - HK
+      - TW
+      - SG
+      - KR
+      - JP
+      - US
+      - UK
+      - Asia
+      - Oceania
+      - America
+      - Europe
+  - name: AI
+    type: select
+    proxies:
+      - US
+      - UK
+      - PROXY
+      - HK
+      - TW
+      - SG
+      - KR
+      - JP
+      - Asia
+      - Oceania
+      - America
+      - Europe
+  - name: Apple
+    type: select
+    proxies:
+      &a1
+      - DIRECT
+      - PROXY
+      - HK
+      - TW
+      - SG
+      - KR
+      - JP
+      - US
+      - UK
+      - Asia
+      - Oceania
+      - America
+      - Europe
+  - name: Amazon
+    type: select
+    proxies:
+      &a2
+      - PROXY
+      - HK
+      - TW
+      - SG
+      - KR
+      - JP
+      - US
+      - UK
+      - Asia
+      - Oceania
+      - America
+      - Europe
+  - name: Bilibili
+    type: select
+    proxies: *a1
+  - name: China
+    type: select
+    proxies: *a1
+  - name: Coursera
+    type: select
+    proxies: *a1
+  - name: Disney
+    type: select
+    proxies: *a2
+  - name: Emby
+    type: select
+    proxies: *a2
+  - name: Google
+    type: select
+    proxies: *a2
+  - name: HamiVideo
+    type: select
+    proxies:
+      - TW
+      - PROXY
+      - HK
+      - SG
+      - KR
+      - JP
+      - US
+      - UK
+      - Asia
+      - Oceania
+      - America
+      - Europe
+  - name: HBOMAX
+    type: select
+    proxies: *a2
+  - name: Microsoft
+    type: select
+    proxies:
+      &a3
+      - PROXY
+      - DIRECT
+      - HK
+      - TW
+      - SG
+      - KR
+      - JP
+      - US
+      - UK
+      - Asia
+      - Oceania
+      - America
+      - Europe
+  - name: Netflix
+    type: select
+    proxies: *a2
+  - name: PayPal
+    type: select
+    proxies: *a3
+  - name: Scholar
+    type: select
+    proxies: *a3
+  - name: Spotify
+    type: select
+    proxies: *a2
+  - name: Steam
+    type: select
+    proxies: *a2
+  - name: StarPlusLogin
+    type: select
+    proxies:
+      - America
+      - PROXY
+      - HK
+      - TW
+      - SG
+      - KR
+      - JP
+      - US
+      - UK
+      - Asia
+      - Oceania
+      - Europe
+  - name: StarPlus
+    type: select
+    proxies:
+      - US
+      - PROXY
+      - HK
+      - TW
+      - SG
+      - KR
+      - JP
+      - UK
+      - Asia
+      - Oceania
+      - America
+      - Europe
+  - name: Speedtest
+    type: select
+    proxies: *a2
+  - name: Twitter
+    type: select
+    proxies: *a2
+  - name: Telegram
+    type: select
+    proxies: *a2
+  - name: Tiktok
+    type: select
+    proxies: *a3
+  - name: YouTube
+    type: select
+    proxies: *a2
+  - name: Reject
+    type: select
+    proxies:
+      - REJECT
+      - PROXY
+  - name: Final
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: HK
+    type: select
+    use:
+      - TAG-HK
+    proxies:
+      - 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - 🇭🇰 Hong Kong 05
+      - 🇭🇰 Hong Kong 06
+      - 🇭🇰 Hong Kong 07
+      - 🇭🇰 Hong Kong 08
+      - 🇭🇰 Hong Kong 09
+      - 🇭🇰 Hong Kong 10
+      - 🇭🇰 Hong Kong 11
+      - 🇭🇰 Hong Kong 12
+      - 🇭🇰 Hong Kong 13
+      - 🇭🇰 Hong Kong 14
+      - 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 23
+  - name: TW
+    type: select
+    use:
+      - TAG-TW
+    proxies:
+      - 🇨🇳 Taiwan 01
+      - 🇨🇳 Taiwan 02
+      - 🇨🇳 Taiwan 03
+      - 🇨🇳 Taiwan 04
+      - 🇨🇳 Taiwan 05
+  - name: SG
+    type: select
+    use:
+      - TAG-SG
+    proxies:
+      - 🇸🇬 Singapore 01
+      - 🇸🇬 Singapore 02
+      - 🇸🇬 Singapore 03
+      - 🇸🇬 Singapore 04
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 08
+      - 🇸🇬 Singapore 09
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 12
+  - name: KR
+    type: select
+    use:
+      - TAG-KR
+    proxies:
+      - 🇰🇷 Korea 01
+      - 🇰🇷 Korea 02
+      - 🇰🇷 Korea 04
+  - name: JP
+    type: select
+    use:
+      - TAG-JP
+    proxies:
+      - 🇯🇵 Japan 01
+      - 🇯🇵 Japan 02
+      - 🇯🇵 Japan 03
+      - 🇯🇵 Japan 04
+      - 🇯🇵 Japan 05
+      - 🇯🇵 Japan 06
+      - 🇯🇵 Japan 07
+      - 🇯🇵 Japan 08
+      - 🇯🇵 Japan 09
+      - 🇯🇵 Japan 10
+      - 🇯🇵 Japan 11
+      - 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇯🇵 Japan 17
+      - 🇯🇵 Japan 18
+      - 🇯🇵 Japan 19
+      - 🇯🇵 Japan 20
+      - 🇯🇵 Japan 21
+      - 🇯🇵 Japan 24
+      - 🇯🇵 Japan 25
+      - 🇯🇵 Japan 26
+      - 🇯🇵 Japan 27
+  - name: US
+    type: select
+    use:
+      - TAG-US
+    proxies:
+      - 🇺🇸 USA Seattle 01
+      - 🇺🇸 USA Seattle 02
+      - 🇺🇸 USA Seattle 03
+      - 🇺🇸 USA Seattle 04
+      - 🇺🇸 USA Seattle 05
+      - 🇺🇸 USA Seattle 06
+      - 🇺🇸 USA Seattle 07
+      - 🇺🇸 USA Seattle 08
+      - 🇺🇸 USA Seattle 09
+      - 🇺🇸 USA San Jose 07
+      - 🇺🇸 USA San Jose 08
+  - name: UK
+    type: select
+    use:
+      - TAG-UK
+    proxies:
+      - 🇬🇧 UK London 01
+      - 🇬🇧 UK London 02
+      - 🇬🇧 UK London 03
+      - 🇬🇧 UK London 04
+      - 🇬🇧 UK London 05
+      - 🇬🇧 UK Coventry 01
+      - 🇬🇧 UK Coventry 02
+      - 🇬🇧 UK Coventry 03
+  - name: Asia
+    type: select
+    use:
+      - TAG-Asia
+    proxies:
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇩 Indonesia 01
+  - name: Oceania
+    type: select
+    use:
+      - TAG-Oceania
+    proxies:
+      - 🇦🇺 Australia Sydney 02
+  - name: America
+    type: select
+    use:
+      - TAG-America
+    proxies:
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇦🇷 Argentina 01
+      - 🇨🇱 Chile 01
+  - name: Europe
+    type: select
+    use:
+      - TAG-Europe
+    proxies:
+      - 🇳🇱 Netherlands 01
+      - 🇷🇺 Russia St. Petersburg
+      - 🇷🇺 Russia Moscow 01
+      - 🇩🇪 Germany 01
+      - 🇩🇪 Germany 02
+      - 🇫🇷 France 01
+      - 🇨🇭 Switzerland 01
+      - 🇨🇭 Switzerland 02
+      - 🇸🇪 Sweden 01
+      - 🇧🇬 Bulgaria 01
+      - 🇦🇹 Austria 01
+      - 🇮🇪 Ireland 01
+      - 🇮🇪 Ireland 02
+      - 🇹🇷 Turkey 01
+      - 🇭🇺 Hungary 01
+  - name: Africa
+    type: select
+    use:
+      - TAG-Africa
+rules:
+  - DOMAIN-SUFFIX,github.dev,DIRECT
+  - IP-CIDR,127.0.0.1/8,DIRECT
+  - DOMAIN-KEYWORD,cnki.net,DIRECT
+  - DOMAIN-KEYWORD,shanbay,DIRECT
+  - DOMAIN-KEYWORD,zhihuishu.com,DIRECT
+  - DOMAIN-KEYWORD,weread.qq.com,DIRECT
+  - DOMAIN-KEYWORD,chaoxing.com,DIRECT
+  - DOMAIN-KEYWORD,xuetangx.com,DIRECT
+  - DOMAIN-KEYWORD,icourse163.org,DIRECT
+  - DOMAIN-KEYWORD,unipus.cn,DIRECT
+  - DOMAIN-KEYWORD,deepl.com,Scholar
+  - DOMAIN-KEYWORD,lingvanex,Scholar
+  - DOMAIN-KEYWORD,leetcode.com,Scholar
+  - DOMAIN-KEYWORD,leetcode.cn,DIRECT
+  - RULE-SET,JD,DIRECT
+  - RULE-SET,Wechat,DIRECT
+  - RULE-SET,Amazon,Amazon
+  - RULE-SET,bilibili,Bilibili
+  - RULE-SET,Disney Plus,Disney
+  - RULE-SET,Emby,Emby
+  - RULE-SET,HamiVideo,HamiVideo
+  - RULE-SET,HBO Max,HBOMAX
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,StarPlusLogin,StarPlusLogin
+  - RULE-SET,StarPlus,StarPlus
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Tiktok,Tiktok
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,YouTube Music,YouTube
+  - RULE-SET,AI,AI
+  - RULE-SET,Claude-ai,AI
+  - RULE-SET,Coursera,Coursera
+  - RULE-SET,OpenAI,AI
+  - RULE-SET,Scholar,Scholar
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,Steam,Steam
+  - RULE-SET,IQ,China
+  - RULE-SET,IQIYI,China
+  - RULE-SET,Letv,China
+  - RULE-SET,Netease Music,China
+  - RULE-SET,Tencent Video,China
+  - RULE-SET,Youku,China
+  - RULE-SET,WeTV,China
+  - RULE-SET,Speedtest,Speedtest
+  - RULE-SET,Proxy,PROXY
+  - RULE-SET,China-Websites,China
+  - RULE-SET,Domestic,DIRECT
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,Special,DIRECT
+  - RULE-SET,direct,China
+  - RULE-SET,reject,Reject
+  - MATCH,Final
+proxy-providers:
+  TAG-HK:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 香港|澳门
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-TW:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 台湾
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-SG:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 新加坡
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-KR:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 韩国
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-JP:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 日本
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-US:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 美国
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-UK:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 英国
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-Asia:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 马来西亚|马尔代夫|柬埔寨|泰国|缅甸|老挝|越南|文莱|朝鲜|关岛|斐济|菲律宾|印尼|印度|蒙古|约旦|伊朗|巴林|阿曼|以色列|土耳其|尼泊尔|孟加拉|黎巴嫩|伊拉克|叙利亚|卡塔尔|阿联酋|阿塞拜疆|亚美尼亚|格鲁吉亚|巴基斯坦|斯里兰卡|沙特阿拉伯|哈萨克斯坦|吉尔吉斯斯坦|乌兹别克斯坦
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-Oceania:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 澳大利亚|新西兰
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-America:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 加拿大|Brazil|巴西|Argentina|阿根廷|Chile|智利|墨西哥|巴拿马|格陵兰|哥斯达黎加|秘鲁|古巴|乌拉圭|牙买加|苏里南|荷属库拉索|哥伦比亚|厄瓜多尔|委内瑞拉|危地马拉
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-Europe:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 荷兰|俄罗斯|德国|法国|瑞士|瑞典|保加利亚|奥地利|爱尔兰|匈牙利|马恩岛|丹麦|挪威|芬兰|冰岛|捷克|希腊|波兰|黑山|乌克兰|卢森堡|意大利|梵蒂冈|比利时|立陶宛|西班牙|葡萄牙|安道尔|马耳他|摩纳哥|克罗地亚|北马其顿|塞尔维亚|塞浦路斯|拉脱维亚|摩尔多瓦|斯洛伐克|爱沙尼亚|白俄罗斯|罗马尼亚|直布罗陀|圣马力诺|斯洛文尼亚|阿尔巴尼亚|波黑共和国|列支敦士登|法属留尼汪
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TAG-Africa:
+    type: file
+    interval: 3600
+    path: /home/rice/.config/clash/provider/proxy-providers/TAG.yaml
+    filter: 波多黎各|开曼群岛|埃及|加纳|南非|摩洛哥|突尼斯|肯尼亚|卢旺达|佛得角|尼日利亚|毛里求斯
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+rule-providers:
+  JD:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/China/JD.yaml
+    interval: 21600
+  Wechat:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/China/Wechat.yaml
+    interval: 21600
+  Claude-ai:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/AI/Claude-ai.yaml
+    interval: 21600
+  Coursera:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Learning/Coursera.yaml
+    interval: 21600
+  OpenAI:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/AI/OpenAI.yaml
+    interval: 21600
+  Scholar:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Learning/Scholar.yaml
+    interval: 21600
+  AI:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/AI/AI.yaml
+    interval: 21600
+  bilibili:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Bilibili.yaml
+    interval: 21600
+  Amazon:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Amazon.yaml
+    interval: 21600
+  Disney Plus:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Disney_Plus.yaml
+    interval: 21600
+  Emby:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Emby.yaml
+    interval: 21600
+  HamiVideo:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/HamiVideo.yaml
+    interval: 21600
+  HBO Max:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/HBO_Max.yaml
+    interval: 21600
+  Netflix:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Netflix.yaml
+    interval: 21600
+  Spotify:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Spotify.yaml
+    interval: 21600
+  StarPlusLogin:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/StarPlusLogin.yaml
+    interval: 21600
+  StarPlus:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/StarPlus.yaml
+    interval: 21600
+  Tiktok:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Tiktok.yaml
+    interval: 21600
+  Twitter:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Twitter.yaml
+    interval: 21600
+  YouTube:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/YouTube.yaml
+    interval: 21600
+  YouTube Music:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/YouTube_Music.yaml
+    interval: 21600
+  Apple:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Apple.yaml
+    interval: 21600
+  Google:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Google.yaml
+    interval: 21600
+  Telegram:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Telegram.yaml
+    interval: 21600
+  Microsoft:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Microsoft.yaml
+    interval: 21600
+  Steam:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Steam.yaml
+    interval: 21600
+  PayPal:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/PayPal.yaml
+    interval: 21600
+  IQ:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/IQI.yaml
+    interval: 21600
+  IQIYI:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/IQYI.yaml
+    interval: 21600
+  Letv:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Letv.yaml
+    interval: 21600
+  Netease Music:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Netease_Music.yaml
+    interval: 21600
+  Tencent Video:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Tencent_Video.yaml
+    interval: 21600
+  Youku:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/Youku.yaml
+    interval: 21600
+  WeTV:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Media/WeTV.yaml
+    interval: 21600
+  Speedtest:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Speedtest.yaml
+    interval: 21600
+  Proxy:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Proxy.yaml
+    interval: 21600
+  Domestic:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Domestic.yaml
+    interval: 21600
+  LAN:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/LAN.yaml
+    interval: 21600
+  China-Websites:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/China/China-Websites.yaml
+    interval: 21600
+  Special:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Special.yaml
+    interval: 21600
+  direct:
+    type: file
+    behavior: domain
+    path: /home/rice/.config/clash/provider/Rules/direct.yaml
+    interval: 21600
+  reject:
+    type: file
+    behavior: classical
+    path: /home/rice/.config/clash/provider/Rules/Reject.yaml
+    interval: 21600
