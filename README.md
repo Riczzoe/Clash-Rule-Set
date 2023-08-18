@@ -1,6 +1,6 @@
 ## 简介
 
-这个项目是我个人使用 clash 的 parser 功能来帮助我自定义我的订阅文件的配置, 以及我正在使用的规则集. 其中规则集中的数据大部分来自于项目[@dler-io/Rules](https://github.com/dler-io/Rules). 有关 parser 的介绍请看[官方文档](https://docs.cfw.lbyczf.com/contents/parser.html#%E7%89%88%E6%9C%AC%E8%A6%81%E6%B1%82)
+这个项目是我个人使用 clash 的 parser 功能来帮助我自定义我的订阅文件的配置, 以及我正在使用的规则集. 其中规则集中的数据大部分来自于项目[@dler-io/Rules](https://github.com/dler-io/Rules). 有关 parser 的介绍请看[官方文档](https://docs.cfw.lbyczf.com/contents/parser.html#%E7%89%88%E6%9C%AC%E8%A6%81%E6%B1%82). 订阅链接经过 parser 处理后的结果可以参考 [parser_res.yaml](./parser_res.yaml).
 
 ## 如何使用
 
