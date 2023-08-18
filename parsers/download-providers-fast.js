@@ -49,7 +49,7 @@ module.exports.parse = async (raw, { axios, yaml, console, homeDir }) => {
             }
 
             const configPath = obj.path.replace('./', '');
-            const filePath = homeDir + 'provider' + configPath;
+            const filePath = homeDir + '/provider/' + configPath;
             const dir = path.dirname(filePath);
 
             if (!fs.existsSync(dir)) {

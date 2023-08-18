@@ -27,23 +27,9 @@
         - DOMAIN-KEYWORD,leetcode.com,Scholar
         - DOMAIN-KEYWORD,leetcode.cn,DIRECT
 
-        - GEOIP,,DIRECT
-        - GEOIP,CN,DIRECT
-
-        # 直连和广告拦截&国内网站
-        - RULE-SET,Domestic,DIRECT
+        # 优先级较高的国内网站
         - RULE-SET,JD,DIRECT
         - RULE-SET,Wechat,DIRECT
-        - RULE-SET,reject,Reject
-
-        # 国内媒体分组
-        - RULE-SET,IQ,China
-        - RULE-SET,IQIYI,China
-        - RULE-SET,Letv,China
-        - RULE-SET,Netease Music,China
-        - RULE-SET,Tencent Video,China
-        - RULE-SET,Youku,China
-        - RULE-SET,WeTV,China
 
         # 流媒体
         - RULE-SET,Amazon,Amazon
@@ -76,27 +62,37 @@
         - RULE-SET,Telegram,Telegram
         - RULE-SET,PayPal,PayPal
         - RULE-SET,Steam,Steam
-      
+        
+        # 国内媒体分组
+        - RULE-SET,IQ,China
+        - RULE-SET,IQIYI,China
+        - RULE-SET,Letv,China
+        - RULE-SET,Netease Music,China
+        - RULE-SET,Tencent Video,China
+        - RULE-SET,Youku,China
+        - RULE-SET,WeTV,China
+
         # 必须规则
         - RULE-SET,Speedtest,Speedtest
         - RULE-SET,Proxy,PROXY
+
+        # 优先级较低的网站
+        - RULE-SET,China-Websites,China
         - RULE-SET,Domestic,DIRECT
         - RULE-SET,LAN,DIRECT
         - RULE-SET,Special,DIRECT
         - RULE-SET,direct,China
+        # - GEOIP,,DIRECT
+        # - GEOIP,CN,DIRECT
+        - RULE-SET,reject,Reject
 
         # 规则之外
         - MATCH,Final 
+
       # 添加规则集
       mix-rule-providers: 
 
-       # 直连和广告拦截和国内网站
-       reject:
-          type: http
-          behavior: classical
-          url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Reject.yaml
-          path: ./Rules/Reject.yaml
-          interval: 21600
+       # 优先级较高的国内网站
        JD:
          type: http
          behavior: classical
@@ -110,49 +106,7 @@
          path: ./Rules/China/Wechat.yaml
          interval: 21600
 
-       # 国内媒体分组
-       IQ:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQ.yaml
-         path: ./Rules/Media/IQI.yaml
-         interval: 21600
-       IQIYI:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQIYI.yaml
-         path: ./Rules/Media/IQYI.yaml
-         interval: 21600
-       Letv:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Letv.yaml
-         path: ./Rules/Media/Letv.yaml
-         interval: 21600
-       Netease Music:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netease%20Music.yaml
-         path: ./Rules/Media/Netease_Music.yaml
-         interval: 21600
-       Tencent Video:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Tencent%20Video.yaml
-         path: ./Rules/Media/Tencent_Video.yaml
-         interval: 21600
-       Youku:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Youku.yaml
-         path: ./Rules/Media/Youku.yaml
-         interval: 21600
-       WeTV:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/WeTV.yaml
-         path: ./Rules/Media/WeTV.yaml
-         interval: 21600
+
 
        # 学习&生产力
        Claude-ai:
@@ -311,6 +265,50 @@
          url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/PayPal.yaml
          path: ./Rules/PayPal.yaml
          interval: 21600
+       
+       # 国内媒体分组
+       IQ:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQ.yaml
+         path: ./Rules/Media/IQI.yaml
+         interval: 21600
+       IQIYI:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQIYI.yaml
+         path: ./Rules/Media/IQYI.yaml
+         interval: 21600
+       Letv:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Letv.yaml
+         path: ./Rules/Media/Letv.yaml
+         interval: 21600
+       Netease Music:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netease%20Music.yaml
+         path: ./Rules/Media/Netease_Music.yaml
+         interval: 21600
+       Tencent Video:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Tencent%20Video.yaml
+         path: ./Rules/Media/Tencent_Video.yaml
+         interval: 21600
+       Youku:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Youku.yaml
+         path: ./Rules/Media/Youku.yaml
+         interval: 21600
+       WeTV:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/WeTV.yaml
+         path: ./Rules/Media/WeTV.yaml
+         interval: 21600
 
       # 必须规则列表
        Speedtest:
@@ -339,6 +337,12 @@
          interval: 21600
       
        # 优先级较低的网站
+       China-Websites:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/China/China-Websites.yaml
+         path: ./Rules/China/China-Websites.yaml
+         interval: 21600
        Special:
          type: http
          behavior: classical
@@ -350,6 +354,10 @@
          behavior: domain
          url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
          path: ./Rules/direct.yaml
+         interval: 21600       
+       reject:
+         type: http
+         behavior: classical
+         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Reject.yaml
+         path: ./Rules/Reject.yaml
          interval: 21600
-
-
