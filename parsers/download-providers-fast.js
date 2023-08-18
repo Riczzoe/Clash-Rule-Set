@@ -56,7 +56,20 @@ module.exports.parse = async (raw, { axios, yaml, console, homeDir }) => {
                 fs.mkdirSync(dir, { recursive: true });
             }
 
-            if (!fs.existsSync(filePath)) {
+            let shouldWrite = true; // 默认值是true
+
+            if (fs.existsSync(filePath)) {
+                const stats = fs.statSync(filePath);
+                const fileCreationTime = stats.birthtime;
+                const sixHours = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+
+                // 如果文件创建时间距离现在不超过6小时，则不需要写入
+                if ((Date.now() - fileCreationTime.getTime()) < sixHours) {
+                    shouldWrite = false;
+                }
+            }
+
+            if (shouldWrite) {
                 fs.writeFileSync(filePath, responseData);
             }
 
