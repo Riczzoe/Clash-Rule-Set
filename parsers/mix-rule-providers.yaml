@@ -74,16 +74,13 @@
 
         # 必须规则
         - RULE-SET,Speedtest,Speedtest
-        - RULE-SET,Proxy,PROXY
 
         # 优先级较低的网站
         - RULE-SET,China-Websites,China
         - RULE-SET,Domestic,DIRECT
         - RULE-SET,LAN,DIRECT
-        - RULE-SET,Special,DIRECT
-        - RULE-SET,direct,China
         # - GEOIP,,DIRECT
-        # - GEOIP,CN,DIRECT
+        - GEOIP,CN,DIRECT
         - RULE-SET,reject,Reject
 
         # 规则之外
@@ -217,7 +214,7 @@
        YouTube:
          type: http
          behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube.yaml
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/YouTube.yaml
          path: ./Rules/Media/YouTube.yaml
          interval: 21600
        YouTube Music:
@@ -250,7 +247,7 @@
        Microsoft:
          type: http
          behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Microsoft.yaml
          path: ./Rules/Microsoft.yaml
          interval: 21600
        Steam:
@@ -262,7 +259,7 @@
        PayPal:
          type: http
          behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/PayPal.yaml
+         url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/PayPal.yaml
          path: ./Rules/PayPal.yaml
          interval: 21600
        
@@ -317,16 +314,10 @@
          url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Speedtest.yaml
          path: ./Rules/Speedtest.yaml
          interval: 21600
-       Proxy:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Proxy.yaml
-         path: ./Rules/Proxy.yaml
-         interval: 21600
        Domestic:
          type: http
          behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Domestic.yaml
+         url: https://github.com/Riczzoe/Clash-Rule-Set/raw/main/Provider/Domestic.yaml
          path: ./Rules/Domestic.yaml
          interval: 21600
        LAN:
@@ -343,18 +334,6 @@
          url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/China/China-Websites.yaml
          path: ./Rules/China/China-Websites.yaml
          interval: 21600
-       Special:
-         type: http
-         behavior: classical
-         url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Special.yaml
-         path: ./Rules/Special.yaml
-         interval: 21600
-       direct:
-         type: http
-         behavior: domain
-         url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
-         path: ./Rules/direct.yaml
-         interval: 21600       
        reject:
          type: http
          behavior: classical
