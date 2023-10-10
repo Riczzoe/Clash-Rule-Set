@@ -8,24 +8,24 @@ parsers:
     file: "/home/rice/util/Clash-rule-set/parsers/default-proxy-groups.yaml"
 
   # Add proxy-providers
-  - reg: nunhcf
+  - reg: wqatom
     file: "/home/rice/util/Clash-rule-set/parsers/proxy-providers/mix-proxy-providers-TAG.yaml"
 
   # Group proxy by region
-  - reg: nunhcf
+  - reg: wqatom
     file: "/home/rice/util/Clash-rule-set/parsers/NEX.yaml"
   - reg: tag
     file: "/home/rice/util/Clash-rule-set/parsers/TAG.yaml"
-  - reg: dogapi
-    file: "/home/rice/util/Clash-rule-set/parsers/PPD.yaml"
+  - reg: kitty|lmsub
+    file: "/home/rice/util/Clash-rule-set/parsers/Universal.yaml"
 
   # Configure the proxy group for each subscription link
-  - reg: nunhcf
+  - reg: wqatom
     file: "/home/rice/util/Clash-rule-set/parsers/NEX.js"
-  - reg: dogapi
-    file: "/home/rice/util/Clash-rule-set/parsers/PPD.js"
   - reg: tag
     file: "/home/rice/util/Clash-rule-set/parsers/TAG.js"  
+  - reg: kitty|lmsub
+    file: "/home/rice/util/Clash-rule-set/parsers/Universal.js"
 
   # Epllogue
   # Add custom rules
@@ -34,3 +34,4 @@ parsers:
   # Optimize the speed when downloading providers
   - reg: ^.*$
     file: "/home/rice/util/Clash-rule-set/parsers/download-providers-fast.js"
+
