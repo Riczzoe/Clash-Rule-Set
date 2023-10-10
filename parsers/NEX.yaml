@@ -4,16 +4,19 @@
           type: select
           use:
             - TAG-HK
+            - Totoro-HK
 
         - name: TW
           type: select
           use:
             - TAG-TW
+            - Totoro-TW
 
         - name: SG 
           type: select
           use:
             - TAG-SG
+            - Totoro-SG
 
         - name: KR
           type: select
@@ -24,11 +27,13 @@
           type: select
           use:
             - TAG-JP
+            - Totoro-JP
 
         - name: US
           type: select
           use:
             - TAG-US
+            - Totoro-US
         
         - name: UK
           type: select
@@ -59,6 +64,16 @@
           type: select
           use:
             - TAG-Africa
+        
+        - name: Other-providers
+          type: select
+          use:
+            - KITTY
+            - Totoro-HK
+            - Totoro-TW
+            - Totoro-SG
+            - Totoro-JP
+            - Totoro-US
 
       commands:
         - proxy-groups.HK.proxies=[]proxyNames|^(?!.*Premium)(.*)(Hong Kong|香港|澳门)+(.*)$ # 向指定策略组添加订阅中的节点名，可使用正则过滤     

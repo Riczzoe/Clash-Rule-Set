@@ -1,5 +1,7 @@
       # 添加规则
       prepend-rules: # 规则由上往下遍历，如上面规则已经命中，则不再往下处理
+        # Kagi 
+        - DOMAIN-SUFFIX,kagi.com,Google
         # CodeSpace
         - DOMAIN-SUFFIX,github.dev,DIRECT
         # - IP-CIDR,34.150.122.109/32,DIRECT

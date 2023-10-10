@@ -6,8 +6,10 @@ module.exports.parse = (raw, { yaml, console }) => {
         return [...new Set(arrays.flat())];
     }
 
+    // const baseProxy = ["HK", "TW", "SG", "KR", "JP", "US", "UK", 
+    //                    "Asia", "Oceania", "America", "Europe", "Africa"];
     const baseProxy = ["HK", "TW", "SG", "KR", "JP", "US", "UK", 
-                       "Asia", "Oceania", "America", "Europe"];
+                       "Asia", "Oceania", "America", "Europe", "Africa", "Other-providers"];
     const MustProxy = ["PROXY", ...baseProxy];
     const DirectFirst = ["DIRECT", ...MustProxy];
     const ProxyFirst = ["PROXY", "DIRECT", ...baseProxy];
