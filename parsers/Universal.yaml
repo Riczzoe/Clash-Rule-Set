@@ -14,9 +14,6 @@
 
         - name: US
           type: select
-        
-        - name: Other
-          type: select
 
       commands:
         - proxy-groups.HK.proxies=[]proxyNames|^(.*)(HK|香港|Hong Kong|澳门)+(.*)$ # 向指定策略组添加订阅中的节点名，可使用正则过滤     
@@ -24,7 +21,7 @@
         - proxy-groups.SG.proxies=[]proxyNames|^(.*)(SG|Singapore|新加坡)+(.*)$ 
         - proxy-groups.JP.proxies=[]proxyNames|^(.*)(JP|Japan|日本)+(.*)$ 
         - proxy-groups.US.proxies=[]proxyNames|^(.*)(US|USA|美国)+(.*)$ 
-        - proxy-groups.Other.proxies=[]proxyNames|^(?!.*(HK|Hong Kong|香港|澳门|TW|Taiwan|台湾|SG|Singapore|新加坡|JP|Japan|日本|US|USA|美国))(.*)+(.*)$
+        # - proxy-groups.Other.proxies=[]proxyNames|^(?!.*(Hong Kong|香港|澳门|TW|Taiwan|台湾|SG|Singapore|新加坡|JP|Japan|日本|US|USA|美国))(.*)+(.*)$
         # - proxy-groups.OTHER.proxies=[]proxyNames|^(?!.*HK)(.*)+(.*)$
         # 一些可能用到的正则过滤节点示例，使分组更细致
         # []proxyNames|a                         # 包含a

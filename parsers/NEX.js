@@ -9,7 +9,7 @@ module.exports.parse = (raw, { yaml, console }) => {
     // const baseProxy = ["HK", "TW", "SG", "KR", "JP", "US", "UK", 
     //                    "Asia", "Oceania", "America", "Europe", "Africa"];
     const baseProxy = ["HK", "TW", "SG", "KR", "JP", "US", "UK", 
-                       "Asia", "Oceania", "America", "Europe", "Africa", "Other-providers"];
+                       "Asia", "Oceania", "America", "Europe", "Africa", "Daily", "Streaming"];
     const MustProxy = ["PROXY", ...baseProxy];
     const DirectFirst = ["DIRECT", ...MustProxy];
     const ProxyFirst = ["PROXY", "DIRECT", ...baseProxy];

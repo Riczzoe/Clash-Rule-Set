@@ -3,20 +3,20 @@
         - name: HK 
           type: select
           use:
+            - UNICORN-HK-P
             - TAG-HK
-            - Totoro-HK
 
         - name: TW
           type: select
           use:
+            - UNICORN-TW-P
             - TAG-TW
-            - Totoro-TW
 
         - name: SG 
           type: select
           use:
+            - UNICORN-SG-P
             - TAG-SG
-            - Totoro-SG
 
         - name: KR
           type: select
@@ -26,14 +26,14 @@
         - name: JP
           type: select
           use:
+            - UNICORN-JP-P
             - TAG-JP
-            - Totoro-JP
 
         - name: US
           type: select
           use:
+            - UNICORN-US-P
             - TAG-US
-            - Totoro-US
         
         - name: UK
           type: select
@@ -65,15 +65,63 @@
           use:
             - TAG-Africa
         
-        - name: Other-providers
+        - name: Daily
+          type: select
+          proxies:
+            - Unicorn
+            - Totoro
+        - name: Streaming
+          type: select
+          proxies:
+            - Totoro
+            - Unicorn
+        - name: Unicorn
           type: select
           use:
-            - KITTY
+            - UNICORN-P
+        - name: Totoro
+          type: select
+          proxies:
             - Totoro-HK
             - Totoro-TW
             - Totoro-SG
             - Totoro-JP
             - Totoro-US
+        - name: Totoro-HK
+          type: load-balance
+          use:
+            - Totoro-HK-P
+          url: 'http://www.gstatic.com/generate_204'
+          interval: 300
+          strategy: round-robin
+        - name: Totoro-TW
+          type: load-balance
+          use:
+            - Totoro-TW-P
+          url: 'http://www.gstatic.com/generate_204'
+          interval: 300
+          strategy: round-robin
+        - name: Totoro-SG
+          type: load-balance
+          use:
+            - Totoro-SG-P
+          url: 'http://www.gstatic.com/generate_204'
+          interval: 300
+          strategy: round-robin
+        - name: Totoro-JP
+          type: load-balance
+          use:
+            - Totoro-JP-P
+          url: 'http://www.gstatic.com/generate_204'
+          interval: 300
+          strategy: round-robin
+        - name: Totoro-US
+          type: load-balance
+          use:
+            - Totoro-US-P
+          url: 'http://www.gstatic.com/generate_204'
+          interval: 300
+          strategy: round-robin
 
       commands:
         - proxy-groups.HK.proxies=[]proxyNames|^(?!.*Premium)(.*)(Hong Kong|香港|澳门)+(.*)$ # 向指定策略组添加订阅中的节点名，可使用正则过滤     
