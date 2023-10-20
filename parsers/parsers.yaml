@@ -1,36 +1,27 @@
 parsers:
   # Prologue
-  # Remove default configuration for all subscription link
-  - reg: ^.*$
-    file: "/home/rice/util/Clash-rule-set/parsers/delete-default-config.js"
+  # Remove default configuration for all subscription link 
   # Add custom proxy-groups
   - reg: ^.*$
-    file: "/home/rice/util/Clash-rule-set/parsers/default-proxy-groups.yaml"
+    file: "/home/rice/util/Clash-rule-set/parsers/prologue.js"
 
   # Add proxy-providers
   - reg: wqatom
-    file: "/home/rice/util/Clash-rule-set/parsers/proxy-providers/mix-proxy-providers-TAG.yaml"
-
-  # Group proxy by region
+    file: "/home/rice/util/Clash-rule-set/parsers/proxy-providers/mix-proxy-providers.yaml"
   - reg: wqatom
     file: "/home/rice/util/Clash-rule-set/parsers/NEX.yaml"
-  - reg: tag
-    file: "/home/rice/util/Clash-rule-set/parsers/TAG.yaml"
-  - reg: kitty|lmsub
-    file: "/home/rice/util/Clash-rule-set/parsers/Universal.yaml"
-
+    
+  # Group proxy by region
+  - reg: ^.*$
+    file: "/home/rice/util/Clash-rule-set/parsers/group-by-regions.js"
   # Configure the proxy group for each subscription link
-  - reg: wqatom
-    file: "/home/rice/util/Clash-rule-set/parsers/NEX.js"
-  - reg: tag
-    file: "/home/rice/util/Clash-rule-set/parsers/TAG.js"  
-  - reg: kitty|lmsub
-    file: "/home/rice/util/Clash-rule-set/parsers/Universal.js"
+  - reg: ^.*$
+    file: "/home/rice/util/Clash-rule-set/parsers/add-proxies.js"
 
   # Epllogue
   # Add custom rules
   - reg: ^.*$
-    file: "/home/rice/util/Clash-rule-set/parsers/mix-rule-providers.yaml"
+    file: "/home/rice/util/Clash-rule-set/parsers/rules.js"
   # Optimize the speed when downloading providers
   - reg: ^.*$
     file: "/home/rice/util/Clash-rule-set/parsers/download-providers-fast.js"

@@ -1,10 +1,16 @@
-module.exports.updateProxyGroups = (rawObj, { MustProxy, DirectFirst, ProxyFirst, baseProxy, AI, HamiVideo, StarPlusLogin, StarPlus }) => {
+const fs = require('fs');
+const path = require('path');
+
+module.exports.assignProxyGroups = (rawObj, { MustProxy, DirectFirst, ProxyFirst, baseProxy, AI, HamiVideo, StarPlusLogin, StarPlus }) => {
     const MustProxyGroup = ["Amazon", "Disney", "Emby", "Google", 
                             "HBOMAX", "Netflix", "Spotify", "Steam", 
                             "Speedtest", "Twitter", "Telegram", "YouTube"
                             ];
     const DirectFirstGroup = ["Apple", "Bilibili", "China", "Coursera"];
     const ProxyFirstGroup = ["Microsoft", "PayPal", "Scholar", "Tiktok"];
+
+    const proxyGroupsConfigPath = path.join(__dirname, 'config/proxy-groups-config.txt');
+    const baseGroup = fs.readFileSync(proxyGroupsConfigPath, 'utf-8').split('\n').filter(name => name.trim() !== '');
 
     const { 'proxy-groups': proxy = [] } = rawObj;
     proxy.forEach(group => {
@@ -24,7 +30,9 @@ module.exports.updateProxyGroups = (rawObj, { MustProxy, DirectFirst, ProxyFirst
             group.proxies = StarPlusLogin;
         } else if (group.name === "StarPlus") {
             group.proxies = StarPlus;
-        } 
+        } else if (baseGroup.includes(group.name)) {
+            group.proxies = ProxyFirst;
+        }
     });
 
     rawObj['proxy-groups'] = proxy;
