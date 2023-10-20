@@ -15,7 +15,7 @@ Apple-ipcidr:
   group: Apple
 Amazon:
   behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Amazon-domain.yaml
+  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Amazon.yaml
   path: ./Rules/Media/Amazon.yaml
   group: Amazon
 bilibili:
