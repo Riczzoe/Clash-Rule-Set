@@ -1,24 +1,18 @@
 payload:
-  # > Bilibili
-  # - USER-AGENT,bili*
-  - DOMAIN-SUFFIX,acg.tv
-  - DOMAIN-SUFFIX,acgvideo.com
-  - DOMAIN-SUFFIX,b23.tv
-  - DOMAIN-SUFFIX,bilibili.com
-  - DOMAIN-SUFFIX,bilibili.tv
-  - DOMAIN-SUFFIX,biliapi.net
-  - DOMAIN-SUFFIX,biliapi.com
-  - DOMAIN-SUFFIX,bilivideo.com
-  - DOMAIN-SUFFIX,hdslb.com
-  - DOMAIN,upos-hz-mirrorakam.akamaized.net
-  # Hong Kong, Macau, Taiwan
-  # - USER-AGENT,bili-inter*
-  - DOMAIN,apiintl.biliapi.net
-
-  # Android Process
-  - PROCESS-NAME,com.bilibili.app.blue
-  - PROCESS-NAME,com.bilibili.app.in
-  - PROCESS-NAME,com.bilibili.comic
-  - PROCESS-NAME,com.bilibili.comic.intl
-  - PROCESS-NAME,tv.danmaku.bili
-  - PROCESS-NAME,tv.danmaku.bilibilihd
+  - acg.tv
+  - acgvideo.com
+  - b23.tv
+  - bilibili.com
+  - bilibili.tv
+  - biliapi.net
+  - biliapi.com
+  - bilivideo.com
+  - hdslb.com
+  - upos-hz-mirrorakam.akamaized.net
+  - apiintl.biliapi.net
+  - com.bilibili.app.blue
+  - com.bilibili.app.in
+  - com.bilibili.comic
+  - com.bilibili.comic.intl
+  - tv.danmaku.bili
+  - tv.danmaku.bilibilihd

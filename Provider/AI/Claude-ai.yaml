@@ -1,5 +1,5 @@
 payload:
-  - DOMAIN-KEYWORD,claude.ai
-  - DOMAIN-KEYWORD,statsig.anthropic.com
-  - DOMAIN-KEYWORD,anthropic.com
+  - claude.ai
+  - statsig.anthropic.com
+  - anthropic.com
 

@@ -1,5 +1,5 @@
 payload:
-  - DOMAIN-KEYWORD,hub.labs.coursera.org
-  - DOMAIN-KEYWORD,sock405-mt1.pusher.com
-  - DOMAIN-KEYWORD,ysxdqfnl.labs.coursera.org
-  - DOMAIN-KEYWORD,www.coursera.org
+  - hub.labs.coursera.org
+  - sock405-mt1.pusher.com
+  - ysxdqfnl.labs.coursera.org
+  - www.coursera.org

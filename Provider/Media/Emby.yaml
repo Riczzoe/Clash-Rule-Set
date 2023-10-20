@@ -1,4 +1,4 @@
 payload:
-  - DOMAIN-SUFFIX,emby.nexitally.com
-  - DOMAIN-KEYWORD,emby.texon.one
-  - DOMAIN-SUFFIX,mb3admin.com
+  - emby.nexitally.com
+  - emby.texon.one
+  - mb3admin.com
