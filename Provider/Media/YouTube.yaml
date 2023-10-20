@@ -2,7 +2,7 @@ payload:
   - googlevideo.com
   - gvt1.com
   - video.google.com
-  - *youtube*
+  - +youtube+
   - youtubeeducation.com
   - youtubeembeddedplayer.googleapis.com
   - youtubei.googleapis.com
