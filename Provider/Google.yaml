@@ -1,6 +1,6 @@
 payload:
-  - gmail
-  - google
+  - gmail.com
+  - google.com
   - 1e100.net
   - 2mdn.net
   - app-measurement.net
@@ -16,8 +16,4 @@ payload:
   - gvt2.com
   - gvt3.com
   - xn--ngstr-lra8j.com
-  - youtu.be
-  - youtube-nocookie.com
-  - youtube.com
-  - yt.be
   - ytimg.com

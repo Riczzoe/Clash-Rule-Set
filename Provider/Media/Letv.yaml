@@ -1,3 +1,2 @@
 payload:
-  # > letv
-  - DOMAIN-SUFFIX,api.mob.app.letv.com
+  - api.mob.app.letv.com

@@ -1,4 +1,2 @@
 payload:
-  # > Youtube Music
-  - PROCESS-NAME,com.google.android.apps.youtube.music
-  - PROCESS-NAME,com.google.android.youtube.tvmusic
+  - music.youtube.com
