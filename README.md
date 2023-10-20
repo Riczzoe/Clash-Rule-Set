@@ -89,38 +89,38 @@ AI:
 - path: 是该规则集的本地路径
 - group: 是该规则集所对应的分组, 该分组必须在`proxy-groups-config.txt`中存在, 不然会解析失败.
 
-接下来为AI`, `Google`, `YouTube`, `foo`, `bar`分别配置规则集, 我们需要在`rule-set.yaml`中添加如下内容:
+接下来为`AI`, `Google`, `YouTube`, `foo`, `bar`分别配置规则集, 我们需要在`rule-set.yaml`中添加如下内容:
 (可以多个规则集对应一个分组)
 
 ```yaml
 OpenAI: 
   behavior: classical 
-  url: https://github.com/Mythologyli/ZJU-Rule/blob/master/Clash/Ruleset/OpenAi.list
+  url: url
   path: ./Rules/AI/OpenAI.yaml
   group: AI
 ChatBot:
   behavior: classical
-  url: https://github.com/Mythologyli/ZJU-Rule/blob/master/Clash/Ruleset/ChatBot.list
+  url: url
   path: ./Rules/AI/ChatBot.yaml
   group: AI
 Google:
   behavior: classical
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Google/Google.yaml
+  url: url
   path: ./Rules/Google.yaml
   group: Google
 YouTube:
   behavior: classical
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/YouTube/YouTube.yaml
+  url: url
   path: ./Rules/YouTube.yaml
   group: YouTube
 foo:
   behavior: classical
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/foo/foo.yaml
+  url: url
   path: ./Rules/foo.yaml
   group: foo
 bar:
   behavior: classical
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/bar/bar.yaml
+  url: url
   path: ./Rules/bar.yaml
   group: bar
 ```
