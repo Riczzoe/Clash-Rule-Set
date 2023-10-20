@@ -1,7 +1,7 @@
 payload:
-  - s.team
-  - steampowered.com
-  - steamcommunity.com
-  - steamgames.com
-  - steamusercontent.com
-  - steamstatic.com
+  - '+.s.team'
+  - '+.steampowered.com'
+  - '+.steamcommunity.com'
+  - '+.steamgames.com'
+  - '+.steamusercontent.com'
+  - '+.steamstatic.com'

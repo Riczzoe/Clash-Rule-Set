@@ -1,15 +1,14 @@
 payload:
-  - openai.com
-  - sentry.io
-  - openai
-  - auth0.com
-  - challenges.cloudflare.com
-  - client-api.arkoselabs.com
-  - events.statsigapi.net
-  - featuregates.org
-  - identrust.com
-  - intercom.io
-  - intercomcdn.com
-  - openaiapi-site.azureedge.net
-  - stripe.com
-
+  - '+.openai.com'
+  - '+.sentry.io'
+  - '+.openai'
+  - '+.auth0.com'
+  - '+.challenges.cloudflare.com'
+  - '+.client-api.arkoselabs.com'
+  - '+.events.statsigapi.net'
+  - '+.featuregates.org'
+  - '+.identrust.com'
+  - '+.intercom.io'
+  - '+.intercomcdn.com'
+  - '+.openaiapi-site.azureedge.net'
+  - '+.stripe.com'

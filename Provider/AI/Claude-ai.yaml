@@ -1,5 +1,4 @@
 payload:
-  - claude.ai
-  - statsig.anthropic.com
-  - anthropic.com
-
+  - '+.claude.ai'
+  - '+.statsig.anthropic.com'
+  - '+.anthropic.com'

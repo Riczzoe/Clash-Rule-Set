@@ -1,9 +1,9 @@
 payload:
-  - max.com
-  - discomax.com
-  - hbo.com
-  - hbomax.com
-  - hbomaxcdn.com
-  - hbonow.com
-  - hbomax.com
+  - '+.max.com'
+  - '+.discomax.com'
+  - '+.hbo.com'
+  - '+.hbomax.com'
+  - '+.hbomaxcdn.com'
+  - '+.hbonow.com'
+  - '+.hbomax.com'
   - execute-api.ap-southeast-1.amazonaws.com

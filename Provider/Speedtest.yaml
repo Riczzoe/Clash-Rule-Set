@@ -1,6 +1,6 @@
 payload:
-  - fast.com
-  - speedtest
-  - ooklaserver.net
-  - speed.dler.io
-  - speed.cloudflare.com
+  - '+.fast.com'
+  - '+.speedtest'
+  - '+.ooklaserver.net'
+  - '+.speed.dler.io'
+  - '+.speed.cloudflare.com'

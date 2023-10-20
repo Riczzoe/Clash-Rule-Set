@@ -1,9 +1,9 @@
 payload:
-  - iqiyi.com
-  - iqiyipic.com
-  - iq.com
-  - qy.net
-  - gitv.tv
-  - 71.am
-  - qiyi
-  - cache.video.iqiyi.com
+  - '+.iqiyi.com'
+  - '+.iqiyipic.com'
+  - '+.iq.com'
+  - '+.qy.net'
+  - '+.gitv.tv'
+  - '+.71.am'
+  - '+.qiyi'
+  - '+.cache.video.iqiyi.com'

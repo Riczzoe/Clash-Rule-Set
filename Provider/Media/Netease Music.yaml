@@ -1,6 +1,6 @@
 payload:
-  - 163yun.com
-  - api.iplay.163.com
-  - hz.netease.com
-  - mam.netease.com
-  - music.163.com
+  - '+.163yun.com'
+  - '+.api.iplay.163.com'
+  - '+.hz.netease.com'
+  - '+.mam.netease.com'
+  - '+.music.163.com'

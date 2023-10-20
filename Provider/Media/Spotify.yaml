@@ -1,13 +1,13 @@
 payload:
-  - pscdn.co
-  - scdn.co
-  - spoti.fi
-  - spotify.com
-  - spotifycdn.com
-  - spotifycdn.net
-  - spotifycharts.com
-  - spotifycodes.com
-  - spotifyjobs.com
-  - spotifynewsroom.jp
-  - spotilocal.com
-  - tospotify.com
+  - '+.pscdn.co'
+  - '+.scdn.co'
+  - '+.spoti.fi'
+  - '+.spotify.com'
+  - '+.spotifycdn.com'
+  - '+.spotifycdn.net'
+  - '+.spotifycharts.com'
+  - '+.spotifycodes.com'
+  - '+.spotifyjobs.com'
+  - '+.spotifynewsroom.jp'
+  - '+.spotilocal.com'
+  - '+.tospotify.com'

@@ -1,4 +1,4 @@
 payload:
-  - emby.nexitally.com
-  - emby.texon.one
-  - mb3admin.com
+  - '+.emby.nexitally.com'
+  - '+.emby.texon.one'
+  - '+.mb3admin.com'

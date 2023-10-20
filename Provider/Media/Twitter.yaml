@@ -1,10 +1,10 @@
 payload:
-  - pscp.tv
-  - periscope.tv
-  - t.co
-  - twimg.co
-  - twimg.com
-  - twitpic.com
-  - twitter.com
-  - twitter.jp
-  - vine.co
+  - '+.pscp.tv'
+  - '+.periscope.tv'
+  - '+.t.co'
+  - '+.twimg.co'
+  - '+.twimg.com'
+  - '+.twitpic.com'
+  - '+.twitter.com'
+  - '+.twitter.jp'
+  - '+.vine.co'
