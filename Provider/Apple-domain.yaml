@@ -1,0 +1,19 @@
+payload:
+  - apple.com.akadns.net
+  - icloud.com.akadns.net
+  - aaplimg.com
+  - apple.co
+  - apple.com
+  - apple-cloudkit.com
+  - apple-mapkit.com
+  - appsto.re
+  - cdn-apple.com
+  - icloud.com
+  - icloud-content.com
+  - itunes.com
+  - me.com
+  - mzstatic.com
+
+  # > Apple News
+  - apple.comscoreresearch.com
+  - apple.news

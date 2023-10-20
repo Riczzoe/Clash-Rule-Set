@@ -1,7 +1,7 @@
 payload:
-  - DOMAIN-SUFFIX,bing.com
-  - DOMAIN-SUFFIX,bard.google.com
-  - DOMAIN-SUFFIX,forefront.ai
-  - DOMAIN-SUFFIX,poe.com
-  - DOMAIN-SUFFIX,poecdn.net
-  - DOMAIN-SUFFIX,claude.ai
+  - bing.com
+  - bard.google.com
+  - forefront.ai
+  - poe.com
+  - poecdn.net
+  - claude.ai
