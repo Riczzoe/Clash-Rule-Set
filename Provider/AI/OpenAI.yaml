@@ -1,15 +1,15 @@
 payload:
-  - DOMAIN-KEYWORD,openai.com
-  - DOMAIN-KEYWORD,sentry.io
-  - DOMAIN-KEYWORD,openai
-  - DOMAIN-SUFFIX,auth0.com
-  - DOMAIN-SUFFIX,challenges.cloudflare.com
-  - DOMAIN-SUFFIX,client-api.arkoselabs.com
-  - DOMAIN-SUFFIX,events.statsigapi.net
-  - DOMAIN-SUFFIX,featuregates.org
-  - DOMAIN-SUFFIX,identrust.com
-  - DOMAIN-SUFFIX,intercom.io
-  - DOMAIN-SUFFIX,intercomcdn.com
-  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-  - DOMAIN-SUFFIX,stripe.com
+  - openai.com
+  - sentry.io
+  - openai
+  - auth0.com
+  - challenges.cloudflare.com
+  - client-api.arkoselabs.com
+  - events.statsigapi.net
+  - featuregates.org
+  - identrust.com
+  - intercom.io
+  - intercomcdn.com
+  - openaiapi-site.azureedge.net
+  - stripe.com
 
