@@ -22,6 +22,9 @@ module.exports.parse = (raw, { yaml }) => {
     const proxyGroups = Object.keys(regions).map(region => {
         const existingGroup = rawObj['proxy-groups'] && rawObj['proxy-groups'].find(g => g.name === region);
         if (existingGroup) {
+            if (!existingGroup.proxies) {
+                existingGroup.proxies = [];
+            }
             return existingGroup;
         }
         return {
@@ -34,6 +37,10 @@ module.exports.parse = (raw, { yaml }) => {
     // 遍历所有的代理节点，并根据其名称归类到对应的策略组中
     if (rawObj.proxies) {
         rawObj.proxies.forEach(proxy => {
+            if (proxy.name.includes('[Premium]')) {
+                return;
+            }
+
             for (const [region, regex] of Object.entries(regions)) {
                 if (regex.test(proxy.name)) {
                     const group = proxyGroups.find(g => g.name === region);
