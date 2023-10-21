@@ -1,0 +1,7 @@
+paylaod:
+  - raw.githubusercontent.com
+  - copilot-proxy.githubusercontent.com
+  - copilot-telemetry.githubusercontent.com
+  - github.com
+  - api.github.com
+  - avatars.githubusercontent.com

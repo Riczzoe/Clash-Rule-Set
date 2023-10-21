@@ -20,3 +20,6 @@ payload:
   - '+.ytimg.com'
   - '+.github.com'
   - '+.githubusercontent.com'
+  - clients4.google.com
+  - www.googleapis.com
+  - jnn-pa.googleapis.com
