@@ -1,4 +1,4 @@
-module.exports.parse = async (raw, { axios, yaml, homeDir}, { name, url, interval, selected }) => {
+module.exports.parse = async (raw, {yaml}, { name}) => {
     const fs = require('fs');
     const path = require('path');
     const { exec } = require('child_process');
@@ -28,10 +28,13 @@ module.exports.parse = async (raw, { axios, yaml, homeDir}, { name, url, interva
     });
 
     // 4. 读取备份配置文件
-    const config = require('./config/backup.json');
+    const configFile = path.join(__dirname, 'config/config.json');
+    const config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
 
     // 检查 name 是否在 needTransferName 列表中
-    if (config.needTransferName.includes(name)) {
+    if (config.needTransferName && config.needTransferName.length > 0 &&
+        config.deviceId && config.deviceId.length > 0 &&
+        config.needTransferName.includes(name)) {
         // 使用 kdeconnect-cli 发送文件到指定的 deviceId
         const deviceId = config.deviceId;
         exec(`kdeconnect-cli -d ${deviceId} --share ${backPath}`, (error, stdout, stderr) => {

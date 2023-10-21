@@ -1,4 +1,4 @@
-// delete require.cache[require.resolve('./assignProxyGroup')];
+delete require.cache[require.resolve('./assignProxyGroup')];
 const { assignProxyGroups } = require('./assignProxyGroup');
 const fs = require('fs');
 const path = require('path');
@@ -12,9 +12,11 @@ module.exports.parse = (raw, { yaml}) => {
         return combineAndDeduplicate(specificNames.filter(name => baseProxy.includes(name)), defaultNames);
     };
 
-    const defaultGroup = ["PROXY", "Final", "Reject"];
-    const proxyGroupsConfigPath = path.join(__dirname, 'config/proxy-groups-config.txt');
-    const baseGroup = fs.readFileSync(proxyGroupsConfigPath, 'utf-8').split('\n').filter(name => name.trim() !== '');
+    const defaultGroup = ["PROXY", "Reject", "Final"];
+    const configFile = path.join(__dirname, 'config/config.json');
+    const config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
+    const baseGroup = config.proxyGroups;
+
     const baseProxy = rawObj['proxy-groups']
         .filter(group => group.type === 'select') // 检查 type 属性
         .map(group => group.name)

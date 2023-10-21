@@ -6,8 +6,9 @@ module.exports.assignProxyGroups = (rawObj, { MustProxy, DirectFirst, ProxyFirst
     const DirectFirstGroup = ["Apple", "Bilibili", "China", "Coursera"];
     const ProxyFirstGroup = ["Microsoft", "PayPal", "Scholar", "Tiktok"];
 
-    const proxyGroupsConfigPath = path.join(__dirname, 'config/proxy-groups-config.txt');
-    const baseGroup = fs.readFileSync(proxyGroupsConfigPath, 'utf-8').split('\n').filter(name => name.trim() !== '');
+    const configFile = path.join(__dirname, 'config/config.json');
+    const config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
+    const baseGroup = config.proxyGroups;
 
     const { 'proxy-groups': proxy = [] } = rawObj;
     proxy.forEach(group => {

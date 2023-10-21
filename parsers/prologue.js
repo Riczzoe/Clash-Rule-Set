@@ -9,9 +9,9 @@ module.exports.parse = (raw, { yaml }) => {
   rawObj['proxy-groups'] = [];
   rawObj.rules = [];
 
-  // 读取proxy-groups-config.txt中的策略组名称
-  const proxyGroupsConfigPath = path.join(__dirname, 'config/proxy-groups-config.txt');
-  const groupNames = fs.readFileSync(proxyGroupsConfigPath, 'utf-8').split('\n').filter(name => name.trim() !== '');
+  const configFile = path.join(__dirname, 'config/config.json');
+  const config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
+  const groupNames = config.proxyGroups;
 
   // 默认的PROXY策略组
   const defaultProxyGroup = {
