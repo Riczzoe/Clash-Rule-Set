@@ -7,22 +7,22 @@ Apple-domain:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Apple-domain.yaml
   path: ./Rules/Apple-domain.yaml
-  group: Apple
+  group: GAM
 Apple-ipcidr:
   behavior: ipcidr
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Apple-ipcidr.yaml
   path: ./Rules/Apple-ipcidr.yaml
-  group: Apple
+  group: GAM
 Amazon:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Amazon.yaml
   path: ./Rules/Media/Amazon.yaml
-  group: Amazon
+  group: GAM
 bilibili:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Bilibili.yaml
   path: ./Rules/Media/Bilibili.yaml
-  group: Bilibili
+  group: China
 Claude-ai:
   behavior: domain 
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/AI/Claude-ai.yaml
@@ -32,37 +32,37 @@ Coursera:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Learning/Coursera.yaml
   path: ./Rules/Learning/Coursera.yaml
-  group: Coursera
+  group: Scholar
 Disney Plus: 
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Disney%20Plus.yaml
   path: ./Rules/Media/Disney_Plus.yaml
-  group: Disney
+  group: Amusement
 Emby:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Emby.yaml
   path: ./Rules/Media/Emby.yaml
-  group: Emby
+  group: Amusement
 Google:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Google.yaml
   path: ./Rules/Google-domain.yaml
-  group: Google
+  group: GAM
 Google-ipcidr:
   behavior: ipcidr
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Google-ipcidr.yaml
   path: ./Rules/Google-ipcidr.yaml
-  group: Google
+  group: GAM
 HamiVideo:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/HamiVideo.yaml
   path: ./Rules/Media/HamiVideo.yaml
-  group: HamiVideo
+  group: Amusement
 HBO Max:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/HBO%20Max.yaml
   path: ./Rules/Media/HBO_Max.yaml
-  group: HBOMAX
+  group: Amusement
 IQIYI:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/IQIYI.yaml
@@ -82,7 +82,7 @@ Microsoft:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Microsoft.yaml
   path: ./Rules/Microsoft.yaml
-  group: Microsoft
+  group: GAM
 Netease Music:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Netease%20Music.yaml
@@ -97,12 +97,12 @@ Netflix:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Netflix.yaml
   path: ./Rules/Media/Netflix.yaml
-  group: Netflix
+  group: Amusement
 Netflix-ipcidr:
   behavior: ipcidr
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Netflix-ipcidr.yaml
   path: ./Rules/Media/Netflix-ipcidr.yaml
-  group: Netflix
+  group: Amusement
 OpenAI:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/AI/OpenAI.yaml
@@ -112,7 +112,7 @@ PayPal:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/PayPal.yaml
   path: ./Rules/PayPal.yaml
-  group: PayPal
+  group: GAM
 Scholar:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Learning/Scholar.yaml
@@ -122,27 +122,32 @@ Speedtest:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Speedtest.yaml
   path: ./Rules/Speedtest.yaml
-  group: Speedtest
+  group: Other
 Spotify:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Spotify.yaml
   path: ./Rules/Media/Spotify.yaml
-  group: Spotify
+  group: Amusement
 StarPlus:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/StarPlus.yaml
   path: ./Rules/Media/StarPlus.yaml
-  group: StarPlus
+  group: Amusement
 StarPlusLogin:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/StarPlusLogin.yaml
   path: ./Rules/Media/StarPlusLogin.yaml
-  group: StarPlusLogin
+  group: Amusement
 Steam:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Steam.yaml
   path: ./Rules/Steam.yaml
-  group: Steam
+  group: Amusement
+Packages:
+  behavior: domain
+  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Download/packages.yaml
+  path: ./Rules/Download/Packages.yaml
+  group: Download
 Telegram-ipcidr:
   behavior: ipcidr
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Telegram-ipcidr.yaml
@@ -162,12 +167,12 @@ Tiktok:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Tiktok.yaml
   path: ./Rules/Media/Tiktok.yaml
-  group: Tiktok
+  group: Amusement
 Twitter:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Twitter.yaml
   path: ./Rules/Media/Twitter.yaml
-  group: Twitter
+  group: Amusement
 Wechat:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/China/Wechat.yaml
@@ -187,12 +192,12 @@ YouTube:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/YouTube.yaml
   path: ./Rules/Media/YouTube.yaml
-  group: YouTube
+  group: Amusement
 YouTube Music:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/YouTube%20Music.yaml
   path: ./Rules/Media/YouTube_Music.yaml
-  group: YouTube
+  group: Amusement
 Youku:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Youku.yaml

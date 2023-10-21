@@ -2,10 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports.assignProxyGroups = (rawObj, { MustProxy, DirectFirst, ProxyFirst, baseProxy, AI, HamiVideo, StarPlusLogin, StarPlus }) => {
-    const MustProxyGroup = ["Amazon", "Disney", "Emby", "Google", 
-                            "HBOMAX", "Netflix", "Spotify", "Steam", 
-                            "Speedtest", "Twitter", "Telegram", "YouTube"
-                            ];
+    const MustProxyGroup = ["Amusement", "GAM"];
     const DirectFirstGroup = ["Apple", "Bilibili", "China", "Coursera"];
     const ProxyFirstGroup = ["Microsoft", "PayPal", "Scholar", "Tiktok"];
 

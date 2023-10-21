@@ -63,17 +63,6 @@ append-proxy-groups: # 建立策略组
     type: select
     use:
       - TAG-Africa
-  
-  - name: Daily
-    type: select
-    proxies:
-      - Unicorn
-      - Totoro
-  - name: Streaming
-    type: select
-    proxies:
-      - Totoro
-      - Unicorn
   - name: Unicorn
     type: select
     use:
