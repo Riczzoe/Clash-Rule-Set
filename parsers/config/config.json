@@ -60,11 +60,11 @@
             "pattern": "/^(.*)(法属留尼汪|埃及|加纳|南非|摩洛哥|突尼斯|肯尼亚|卢旺达|佛得角|安哥拉|尼日利亚|毛里求斯)+(.*)/"
         }
     ],
+    "backDir": "\/home\/rice\/Documents\/clash\/",
     "deviceId": "f7910085_01fc_4d5e_817f_20372b6ae206",
     "needTransferName": [
         "TAG", 
         "NEX", 
-        "Nexitally",
-        "Unicorn"
+        "Nexitally"
     ]
 }

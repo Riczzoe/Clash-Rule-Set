@@ -8,11 +8,13 @@ module.exports.parse = async (raw, {yaml}, { name}) => {
     const timestamp = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
 
     // 2. 创建文件名
-    const backPath = path.join('/home/rice/Documents/', 'clash', `${name}_${timestamp}.yaml`);
+    const configFile = path.join(__dirname, 'config/config.json');
+    const config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
+    const backPath = path.join(config.backDir, `${name}_${timestamp}.yaml`);
     fs.writeFileSync(backPath, raw);
 
-    // 3. 列出与特定文件名相关的备份文件并保留最新的6个
-    const backupDir = path.join('/home/rice/Documents/', 'clash');
+    // 3. 列出与特定文件名相关的备份文件并保留最新的3个
+    const backupDir = config.backDir;
     const backupFiles = fs.readdirSync(backupDir)
         .filter(file => file.startsWith(`${name}_`) && file.endsWith('.yaml'))  // 过滤出与特定文件名相关的备份文件
         .sort((a, b) => {
@@ -20,16 +22,13 @@ module.exports.parse = async (raw, {yaml}, { name}) => {
             const statsB = fs.statSync(path.join(backupDir, b));
             return statsB.birthtimeMs - statsA.birthtimeMs;  // 根据文件的创建时间降序排序
         })
-        .slice(3);  // 从第七个文件开始的列表
+        .slice(3);
 
-    // 删除超出六个的备份
+    // 删除超出3个的备份
     backupFiles.forEach(file => {
         fs.unlinkSync(path.join(backupDir, file));
     });
 
-    // 4. 读取备份配置文件
-    const configFile = path.join(__dirname, 'config/config.json');
-    const config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
 
     // 检查 name 是否在 needTransferName 列表中
     if (config.needTransferName && config.needTransferName.length > 0 &&
