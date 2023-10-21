@@ -1,4 +1,4 @@
-paylaod:
+payload:
   - raw.githubusercontent.com
   - copilot-proxy.githubusercontent.com
   - copilot-telemetry.githubusercontent.com
