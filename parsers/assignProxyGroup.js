@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports.assignProxyGroups = (rawObj, { MustProxy, DirectFirst, ProxyFirst, baseProxy, AI, HamiVideo, StarPlusLogin, StarPlus }) => {
     const MustProxyGroup = ["Amusement", "GAM"];
-    const DirectFirstGroup = ["Apple", "Bilibili", "China", "Coursera"];
-    const ProxyFirstGroup = ["Microsoft", "PayPal", "Scholar", "Tiktok"];
+    const DirectFirstGroup = ["China", ];
+    const ProxyFirstGroup = ["Download", "GAM", "Scholar", "Tech"];
 
     const configFile = path.join(__dirname, 'config/config.json');
     const config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));

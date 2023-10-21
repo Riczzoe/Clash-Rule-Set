@@ -18,10 +18,15 @@ Amazon:
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Amazon.yaml
   path: ./Rules/Media/Amazon.yaml
   group: GAM
-bilibili:
+China-streaming:
   behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Bilibili.yaml
-  path: ./Rules/Media/Bilibili.yaml
+  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/China-streaming.yaml
+  path: ./Rules/Media/China-streaming.yaml
+  group: China
+China-streaming-ipcidr:
+  behavior: ipcidr
+  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/China-streaming-ipcidr.yaml
+  path: ./Rules/Media/China-streaming.yaml
   group: China
 Claude-ai:
   behavior: domain 
@@ -43,6 +48,11 @@ Emby:
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Emby.yaml
   path: ./Rules/Media/Emby.yaml
   group: Amusement
+Github:
+  behavior: domain
+  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Daily/Github.yaml
+  path: ./Rules/Daily/Github.yaml
+  group: Tech
 Google:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Google.yaml
@@ -63,36 +73,16 @@ HBO Max:
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/HBO%20Max.yaml
   path: ./Rules/Media/HBO_Max.yaml
   group: Amusement
-IQIYI:
-  behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/IQIYI.yaml
-  path: ./Rules/Media/IQYI.yaml
-  group: China
 JD:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/China/JD.yaml
   path: ./Rules/China/JD.yaml
   group: DIRECT
-Letv:
-  behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Letv.yaml
-  path: ./Rules/Media/Letv.yaml
-  group: China
 Microsoft:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Microsoft.yaml
   path: ./Rules/Microsoft.yaml
   group: GAM
-Netease Music:
-  behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Netease%20Music.yaml
-  path: ./Rules/Media/Netease_Music.yaml
-  group: China
-Netease Music-ipcidr:
-  behavior: ipcidr
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Netease%20Music-ipcidr.yaml
-  path: ./Rules/Media/Netease_Music_ipcidr.yaml
-  group: China
 Netflix:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Netflix.yaml
@@ -122,7 +112,7 @@ Speedtest:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Speedtest.yaml
   path: ./Rules/Speedtest.yaml
-  group: Other
+  group: GAM
 Spotify:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Spotify.yaml
@@ -148,21 +138,21 @@ Packages:
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Download/packages.yaml
   path: ./Rules/Download/Packages.yaml
   group: Download
+Tech:
+  behavior: domain
+  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Daily/Tech.yaml
+  path: ./Rules/Daily/Tech.yaml
+  group: Tech
 Telegram-ipcidr:
   behavior: ipcidr
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Telegram-ipcidr.yaml
   path: ./Rules/Telegram-ipcidr.yaml
-  group: Telegram
+  group: Amusement
 Telegram:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Telegram.yaml
   path: ./Rules/Telegram.yaml
-  group: Telegram
-Tencent Video:
-  behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Tencent%20Video.yaml
-  path: ./Rules/Media/Tencent_Video.yaml
-  group: China
+  group: Amusement
 Tiktok:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Tiktok.yaml
@@ -173,21 +163,6 @@ Twitter:
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Twitter.yaml
   path: ./Rules/Media/Twitter.yaml
   group: Amusement
-Wechat:
-  behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/China/Wechat.yaml
-  path: ./Rules/China/Wechat.yaml
-  group: DIRECT
-Wechat-ipcidr:
-  behavior: ipcidr
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/China/Wechat-ipcidr.yaml
-  path: ./Rules/China/Wechat-ipcidr.yaml
-  group: DIRECT
-WeTV:
-  behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/WeTV.yaml
-  path: ./Rules/Media/WeTV.yaml
-  group: China
 YouTube:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/YouTube.yaml
@@ -198,16 +173,6 @@ YouTube Music:
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/YouTube%20Music.yaml
   path: ./Rules/Media/YouTube_Music.yaml
   group: Amusement
-Youku:
-  behavior: domain
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Youku.yaml
-  path: ./Rules/Media/Youku.yaml
-  group: China
-Youku-ipcidr:
-  behavior: ipcidr
-  url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Media/Youku-ipcidr.yaml
-  path: ./Rules/Media/Youku-ipcidr.yaml
-  group: China
 Domestic:
   behavior: domain
   url: https://github.com/Riczzoe/Clash-Rule-Set/raw/main/Provider/Domestic.yaml
