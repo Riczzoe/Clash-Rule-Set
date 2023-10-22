@@ -1,5 +1,12 @@
 payload:
   - api.openweathermap.org
   - a.nel.cloudflare.com
-  - dycf0120231020.lmspeedapp.com
+  - '+.lmspeedapp.com'
   - dycf0120231019.lmspeedapp.com
+  - config.immersivetranslate.com
+  - watchtower.1password.com
+  - news.ycombinator.com
+  - v2ex.com
+  - unixgame.io
+  - www.facebook.com
+  - '+.kde.org'

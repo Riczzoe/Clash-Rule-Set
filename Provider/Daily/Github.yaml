@@ -5,3 +5,7 @@ payload:
   - github.com
   - api.github.com
   - avatars.githubusercontent.com
+  - alive.github.com
+  - github.githubassets.com
+  - ssh.github.com
+  - education.github.com

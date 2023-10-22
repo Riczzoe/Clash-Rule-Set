@@ -9,3 +9,7 @@ payload:
   - metadata.ftp-master.debian.org
   - wqatom.lol
   - registry.npmjs.org
+  - metadata.ftp-master.debian.org
+  - metadata.ftp-master.debian.org
+  - appstream.debian.org
+  - '+.debian.pool.ntp.org'

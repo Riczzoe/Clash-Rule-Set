@@ -373,3 +373,5 @@ payload:
   - '+.officecdn-microsoft-com.akamaized.net'
   - statics-marketingsites-eus-ms-com.akamaized.net
   - statics-marketingsites-wcus-ms-com.akamaized.net
+  - mobile.events.data.microsoft.com
+  - westus-0.in.applicationinsights.azure.com
