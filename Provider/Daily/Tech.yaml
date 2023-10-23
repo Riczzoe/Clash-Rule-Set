@@ -10,27 +10,27 @@ payload:
   - unixgame.io
   - www.facebook.com
   - '+.kde.org'
-app.gitbook.com
-www.kubuntuforums.net
-c.wired.com
-content.gitbook.com
-www.reddit.com
-www.redditstatic.com
-styles.redditmedia.com
-media.wired.com
-www.wired.com
-www.gitbook.com
-rsshub.js.org
-getsurfboard.com
-stackoverflow.com
-clash-meta.wiki
-cdn.v2ex.com
-extensions.gnome.org
-bugs.kde.org
-api.gitbook.com
-a.thumbs.redditmedia.com
-c.1password.com
-manual.getsurfboard.com
-i.stack.imgur.com
-my.1password.com
-b5n.1password.com
+  - app.gitbook.com
+  - www.kubuntuforums.net
+  - c.wired.com
+  - content.gitbook.com
+  - www.reddit.com
+  - www.redditstatic.com
+  - styles.redditmedia.com
+  - media.wired.com
+  - www.wired.com
+  - www.gitbook.com
+  - rsshub.js.org
+  - getsurfboard.com
+  - stackoverflow.com
+  - clash-meta.wiki
+  - cdn.v2ex.com
+  - extensions.gnome.org
+  - bugs.kde.org
+  - api.gitbook.com
+  - a.thumbs.redditmedia.com
+  - c.1password.com
+  - manual.getsurfboard.com
+  - i.stack.imgur.com
+  - my.1password.com
+  - b5n.1password.com
