@@ -9,3 +9,8 @@ payload:
   - github.githubassets.com
   - ssh.github.com
   - education.github.com
+  - opengraph.githubassets.com
+  - camo.githubusercontent.com
+  - user-images.githubusercontent.com
+  - objects.githubusercontent.com
+  - '+.githubusercontent.com'
