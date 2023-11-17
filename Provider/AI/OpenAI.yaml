@@ -12,3 +12,7 @@ payload:
   - '+.intercomcdn.com'
   - '+.openaiapi-site.azureedge.net'
   - '+.stripe.com'
+  - 'oaistatic.com'
+  - 'oaiusercontent.com'
+  - '+.oaistatic.com'
+  - '+.oaiusercontent.com'
