@@ -1,6 +1,5 @@
 payload:
   - api.openweathermap.org
-  - a.nel.cloudflare.com
   - '+.lmspeedapp.com'
   - dycf0120231019.lmspeedapp.com
   - config.immersivetranslate.com
