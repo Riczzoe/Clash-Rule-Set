@@ -10,10 +10,10 @@ parsers:
     file: "/home/rice/util/Clash-rule-set/parsers/proxy-providers/mix-proxy-providers.yaml"
   - reg: wqatom
     file: "/home/rice/util/Clash-rule-set/parsers/NEX.yaml"
-    
-  # Group proxy by region
+
+  # Group proxy by config
   - reg: ^.*$
-    file: "/home/rice/util/Clash-rule-set/parsers/group-by-regions.js"
+    file: "/home/rice/util/Clash-rule-set/parsers/group-proxies.js"
   # Configure the proxy group for each subscription link
   - reg: ^.*$
     file: "/home/rice/util/Clash-rule-set/parsers/add-proxies.js"
@@ -22,7 +22,8 @@ parsers:
   # Add custom rules
   - reg: ^.*$
     file: "/home/rice/util/Clash-rule-set/parsers/rules.js"
+  - reg: ^.*$
+    file: "/home/rice/util/Clash-rule-set/parsers/backup-file.js"
   # Optimize the speed when downloading providers
   - reg: ^.*$
     file: "/home/rice/util/Clash-rule-set/parsers/download-providers-fast.js"
-
