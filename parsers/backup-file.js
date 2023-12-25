@@ -16,6 +16,12 @@ module.exports.parse = async (raw, {yaml}, { name}) => {
         fs.mkdirSync(backupDir, { recursive: true }); 
     }
 
+    function logToFile(message) {
+        const logFilePath = path.join(backupDir, 'log', 'log.txt'); // 你可以修改这个路径
+        const date = new Date().toISOString();
+        fs.appendFileSync(logFilePath, `${date}: ${message}\n`);
+    }
+
     // 1. 生成当前时间的字符串形式
     const currentDate = new Date();
     const timestamp = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
@@ -46,13 +52,29 @@ module.exports.parse = async (raw, {yaml}, { name}) => {
         config.needTransferName.includes(name)) {
         // 使用 kdeconnect-cli 发送文件到指定的 deviceId
         const deviceId = config.deviceId;
-        exec(`kdeconnect-cli -d ${deviceId} --share ${backPath}`, (error, stdout, stderr) => {
-            if (error) {
-                console.error(`exec error: ${error}`);
-            }
-            console.log(`File sent: ${stdout}`);
-        });
-    }
 
+        let transferCMD = '';
+        if (config.transferMethod === "kdeconnect-cli") {
+            transferCMD = `kdeconnect-cli -d ${deviceId} --share ${backPath}`;
+        } else if (config.transferMethod === "gsconnect") {
+            const gsconnectCommand = config.command || "gsconnect";
+            transferCMD = `${gsconnectCommand} --device ${deviceId} --share-file=${backPath}`;
+        } else {
+            const errorMessage = "Invalid transfer method specified in config.";
+            logToFile(errorMessage);
+            return raw;
+        }
+        logToFile(`Sending file with command: ${transferCMD}`);
+
+        exec(transferCMD, (error, stdout, stderr) => {
+            if (error) {
+                const execError = `exec error: ${error}`;
+                logToFile(execError);
+            }
+            logToFile(`File sent with command: ${transferCMD}\nConfig: ${JSON.stringify(config, null, 2)}`);
+        });
+    } else {
+        logToFile(`File saved: ${backPath}\nConfig: ${JSON.stringify(config, null, 2)}`);
+    }
     return raw;
 };

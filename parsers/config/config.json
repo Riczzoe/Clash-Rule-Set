@@ -60,7 +60,9 @@
         }
     ],
     "backDir": "~/Documents\/clash\/backups\/",
-    "deviceId": "f7910085_01fc_4d5e_817f_20372b6ae206",
+    "transferMethod": "gsconnect",
+    "command": "\/home\/rice\/.local\/share\/gnome-shell\/extensions\/gsconnect@andyholmes.github.io\/service\/daemon.js",
+    "deviceId": "75169be8_9c3d_45dd_97bb_a94b2d2512a9",
     "needTransferName": [
         "TAG", 
         "NEX", 

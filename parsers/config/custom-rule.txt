@@ -13,3 +13,4 @@ DOMAIN-KEYWORD,deepl.com,Scholar
 DOMAIN-KEYWORD,lingvanex,Scholar
 DOMAIN-KEYWORD,leetcode.com,Scholar
 DOMAIN-KEYWORD,leetcode.cn,DIRECT
+IP-CIDR,35.220.215.34/32,Scholar

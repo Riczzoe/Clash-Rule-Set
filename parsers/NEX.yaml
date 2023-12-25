@@ -2,19 +2,16 @@ append-proxy-groups: # 建立策略组
   - name: HK 
     type: select
     use:
-      - UNICORN-HK-P
       - TAG-HK
 
   - name: TW
     type: select
     use:
-      - UNICORN-TW-P
       - TAG-TW
 
   - name: SG 
     type: select
     use:
-      - UNICORN-SG-P
       - TAG-SG
 
   - name: KR
@@ -25,13 +22,11 @@ append-proxy-groups: # 建立策略组
   - name: JP
     type: select
     use:
-      - UNICORN-JP-P
       - TAG-JP
 
   - name: US
     type: select
     use:
-      - UNICORN-US-P
       - TAG-US
   
   - name: UK
@@ -63,50 +58,3 @@ append-proxy-groups: # 建立策略组
     type: select
     use:
       - TAG-Africa
-  - name: Unicorn
-    type: select
-    use:
-      - UNICORN-P
-  - name: Totoro
-    type: select
-    proxies:
-      - Totoro-HK
-      - Totoro-TW
-      - Totoro-SG
-      - Totoro-JP
-      - Totoro-US
-  - name: Totoro-HK
-    type: load-balance
-    use:
-      - Totoro-HK-P
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    strategy: round-robin
-  - name: Totoro-TW
-    type: load-balance
-    use:
-      - Totoro-TW-P
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    strategy: round-robin
-  - name: Totoro-SG
-    type: load-balance
-    use:
-      - Totoro-SG-P
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    strategy: round-robin
-  - name: Totoro-JP
-    type: load-balance
-    use:
-      - Totoro-JP-P
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    strategy: round-robin
-  - name: Totoro-US
-    type: load-balance
-    use:
-      - Totoro-US-P
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-    strategy: round-robin
