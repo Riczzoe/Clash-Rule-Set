@@ -20,6 +20,7 @@ payload:
   - '+.chat.openai.com'
   - 'a.nel.cloudflare.com'
   - openai.com
+  - chatgpt.com
   - ai.com
   - openaiapi-site.azureedge.net
   - openaicom.imgix.net
