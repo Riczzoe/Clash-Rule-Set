@@ -132,7 +132,7 @@ Steam:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Steam.yaml
   path: ./Rules/Steam.yaml
-  group: Amusement
+  group: Download
 Packages:
   behavior: domain
   url: https://raw.githubusercontent.com/Riczzoe/Clash-Rule-Set/main/Provider/Download/packages.yaml
