@@ -13,3 +13,4 @@ payload:
   - metadata.ftp-master.debian.org
   - appstream.debian.org
   - '+.debian.pool.ntp.org'
+  - repo.anaconda.com
