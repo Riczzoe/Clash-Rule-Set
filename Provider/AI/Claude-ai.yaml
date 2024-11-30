@@ -3,3 +3,4 @@ payload:
   - '+.statsig.anthropic.com'
   - '+.anthropic.com'
   - 'www.claudeusercontent.com'
+  - 'cdn.usefathom.com'
