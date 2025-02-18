@@ -1,5 +1,19 @@
 payload:
+  - api.audible.com
+  - api.amazon.com
+  - series-na.amazon.com
+  - globalstore.amazon.cn
+  - cde-ta-g7g.amazon.com
+  - kinapp-notifications-na.amazon.com
+  - unagi-na.amazon.com
+  - fls-na.amazon.com
+  - todo-ta-g7g.amazon.com
+  - m.media-amazon.coma
+  - msh.amazon.com
+  - '+amazon.com'
   - '+a2z.com'
+  - '+kochava.com'
+  - '+amazon.dev'
   - '+aboutamazon.cn'
   - '+aboutamazon.co.uk'
   - '+aboutamazon.com'
