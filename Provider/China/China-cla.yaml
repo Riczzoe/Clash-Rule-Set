@@ -1,0 +1,24 @@
+payload:
+  # Weibo
+  - DOMAIN-KEYWORD,weibo
+
+  # Xiaomi
+  - PROCESS-NAME,com.xiaomi.mibrain.speech
+  - PROCESS-NAME,小米云服务.exe
+
+  # ByteDance
+  - PROCESS-NAME,com.zhiliaoapp.musically
+
+  # Xunlei
+  - PROCESS-NAME,Thunder
+  - PROCESS-NAME,Thunder.exe
+
+  # IQIYI
+  - PROCESS-NAME,com.qiyi.video
+  - DOMAIN-KEYWORD,qiyi
+
+  # Alibaba
+  - PROCESS-NAME,com.taobao.taobao
+
+  # WeChat
+  - IP-ASN,132203,no-resolve
