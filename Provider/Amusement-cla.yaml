@@ -1,0 +1,35 @@
+payload:
+  # Spotify
+  - DOMAIN-KEYWORD,spotify
+  - PROCESS-NAME,com.spotify.music
+
+  # YouTube
+  - DOMAIN-KEYWORD,youtube
+
+  # Apple Music
+  - PROCESS-NAME,Music
+
+  # Apple TV
+  - PROCESS-NAME,TV
+
+  # HBO
+  - PROCESS-NAME,com.hbo.hbonow
+
+  # Disney+
+  - PROCESS-NAME,com.disney.datg.videoplatforms.android.abc
+  - PROCESS-NAME,com.disney.disneyplus
+
+  # Netflix
+  - PROCESS-NAME,com.netflix.mediaclient
+
+  # Prime Video
+  - DOMAIN-KEYWORD,avoddashs
+
+  # Discovery+
+  - DOMAIN-KEYWORD,discovery.uplynk.com
+
+  # Hulu
+  - PROCESS-NAME,com.hulu.plus
+
+  # Twitter
+  - DOMAIN-KEYWORD,twitter
