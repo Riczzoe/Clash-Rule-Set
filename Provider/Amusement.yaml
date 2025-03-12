@@ -28,6 +28,7 @@ payload:
   - '+.tospotify.com'
 
   # YouTube
+  - youtubei.googleapis.com
   - '+.ggpht.cn'
   - '+.ggpht.com'
   - '+.googlevideo.com'
@@ -202,7 +203,6 @@ payload:
   - '+.youtubego.com.br'
   - '+.youtubego.id'
   - '+.youtubego.in'
-  - '+.youtubei.googleapis.com'
   - '+.youtubekids.com'
   - '+.youtubemobilesupport.com'
   - '+.yt.be'

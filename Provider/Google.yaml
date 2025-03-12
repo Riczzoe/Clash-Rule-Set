@@ -4,7 +4,6 @@ payload:
   - jnn-pa.googleapis.com
   - firestore.googleapis.com
   - yt3.googleusercontent.com
-  - play-lh.googleusercontent.com
   - lh3.googleusercontent.com
   - accounts.google.es
   - goodmovies.io
@@ -14,7 +13,6 @@ payload:
   - '+.2mdn.net'
   - '+.app-measurement.net'
   - '+.g.co'
-  - '+.ggpht.com'
   - '+.goo.gl'
   - '+.googleapis.cn'
   - '+.googleapis.com'
@@ -24,5 +22,11 @@ payload:
   - '+.gvt1.com'
   - '+.gvt2.com'
   - '+.gvt3.com'
-  - '+.xn--ngstr-lra8j.com'
-  - '+.ytimg.com'
+
+  # # Google Play
+  # - '+.xn--ngstr-lra8j.com'
+  # - play-lh.googleusercontent.com
+  # # Youtube
+  # - '+.ytimg.com'
+  # - '+.ggpht.com'
+
