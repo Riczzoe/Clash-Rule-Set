@@ -1,0 +1,10 @@
+payload
+  # Google Play Store
+  - play-lh.googleusercontent.com
+  - play-fe.googleapis.com
+  - play.googleapis.com
+  - playstoregatewayadapter-pa.googleapis.com
+  - digitalassetlinks.googleapis.com
+  - android.clients.google.com
+  - '+.xn--ngstr-lra8j.com'
+  - '+services.googleapis.cn'
