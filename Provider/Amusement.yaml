@@ -28,6 +28,7 @@ payload:
   - '+.tospotify.com'
 
   # YouTube
+  - lh3.googleusercontent.com
   - youtubei.googleapis.com
   - '+.ggpht.cn'
   - '+.ggpht.com'
