@@ -12,4 +12,12 @@ payload:
   # Github Raw
   - raw.githubusercontent.com
   - '+.githubusercontent.com'
+  - copilot-proxy.githubusercontent.com
+  - copilot-telemetry.githubusercontent.com
+  - avatars.githubusercontent.com
+  - github.githubassets.com
+  - opengraph.githubassets.com
+  - camo.githubusercontent.com
+  - user-images.githubusercontent.com
+  - objects.githubusercontent.com
 

@@ -1,14 +1,6 @@
 payload:
-  - copilot-proxy.githubusercontent.com
-  - copilot-telemetry.githubusercontent.com
   - github.com
   - api.github.com
-  - avatars.githubusercontent.com
   - alive.github.com
-  - github.githubassets.com
   - ssh.github.com
   - education.github.com
-  - opengraph.githubassets.com
-  - camo.githubusercontent.com
-  - user-images.githubusercontent.com
-  - objects.githubusercontent.com
