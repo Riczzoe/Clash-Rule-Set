@@ -8,3 +8,8 @@ payload:
   - android.clients.google.com
   - services.googleapis.cn
   - '+.xn--ngstr-lra8j.com'
+
+  # Github Raw
+  - raw.githubusercontent.com
+  - '+.githubusercontent.com'
+
