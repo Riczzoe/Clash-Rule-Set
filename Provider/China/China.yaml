@@ -5191,3 +5191,7 @@ payload:
   - '+.airchinacargo.com'
   - '+.antutu.com'
   - '+.aiqicha.baidu.com'
+  # CSDN
+  - www.csdn.net
+  - blog.csdn.net
+  - '+.csdn.net'
