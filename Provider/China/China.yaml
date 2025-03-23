@@ -3092,6 +3092,8 @@ payload:
   - '+.wuxizazhi.net.cn'
 
   # CSDN
+  - www.csdn.net
+  - blog.csdn.net
   - '+.codechina.net'
   - '+.csdn.com'
   - '+.csdn.net'
